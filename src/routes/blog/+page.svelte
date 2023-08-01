@@ -6,7 +6,7 @@
 
 	let search = ''
 
-	$: filteredPosts = data.posts.filter((post) =>
+	$: filteredPosts = data.posts.filter((post: { title: string }) =>
 		post.title.toLowerCase().includes(search.trim())
 	)
 </script>
